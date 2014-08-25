@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823004341) do
+
+ActiveRecord::Schema.define(version: 20140820082409) do
+
+  create_table "attachments", force: true do |t|
+    t.string   "filename"
+    t.integer  "itemid"
+    t.string   "version"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "administrators", force: true do |t|
     t.string   "email"
