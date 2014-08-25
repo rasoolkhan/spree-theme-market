@@ -40,4 +40,12 @@ ActiveRecord::Schema.define(version: 20140820082409) do
     t.datetime "updated_at"
   end
 
+  create_table "orders", force: true do |t|
+    t.integer  "order_number", null: false
+    t.integer  "buyer_id"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end
