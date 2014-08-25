@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140823004341) do
   end
 
   create_table "orders", force: true do |t|
-    t.integer  "order_number"
+    t.integer  "order_number", null: false
     t.integer  "buyer_id"
     t.string   "status"
     t.datetime "created_at"
