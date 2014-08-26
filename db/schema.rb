@@ -11,21 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 20140825092214) do
 
-ActiveRecord::Schema.define(version: 20140820082409) do
-
-  create_table "attachments", force: true do |t|
-    t.string   "filename"
-    t.integer  "itemid"
-    t.string   "version"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "administrators", force: true do |t|
     t.string   "email"
     t.string   "username"
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "attachments", force: true do |t|
+    t.string   "filename"
+    t.integer  "item_id"
+    t.string   "version"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,12 +42,47 @@ ActiveRecord::Schema.define(version: 20140820082409) do
     t.datetime "updated_at"
   end
 
+  create_table "buyers", force: true do |t|
+    t.string   "email"
+    t.string   "username"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "items", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.decimal  "price"
+    t.string   "code"
+    t.integer  "author_id"
+    t.integer  "order_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "orders", force: true do |t|
     t.integer  "order_number", null: false
     t.integer  "buyer_id"
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "payments", force: true do |t|
+    t.integer  "buyer_id"
+    t.integer  "order_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "purchased_items", force: true do |t|
+    t.integer  "item_id"
+    t.integer  "buyer_id"
+    t.datetime "purchased_at"
+    t.decimal  "cost"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "payment_id"
   end
 
 end
