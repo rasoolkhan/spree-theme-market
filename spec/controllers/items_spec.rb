@@ -2,16 +2,14 @@ require "spec_helper"
 require "rails_helper"
 
 describe ItemsController do
-  describe "#index" do
-    subject { get :index }
-
-    specify { should render_template("index") }
-  end
-  
-  describe "GET index" do
-    it "has a 200 status code" do
+  describe "GET index page" do
+    it "responds with status 200" do
       get :index
-      response.code.should eq("200")
+      expect(response).to have_http_status("200")
+    end
+    it "renders items/index template" do
+      get :index
+      expect(response).to render_template("index")
     end
   end
 end
