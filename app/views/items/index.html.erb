@@ -1,9 +1,9 @@
 <div>
-  <div class="pure-g">
-    <% @items.each do |item| %>
-      <div class="pure-u-1-3">
-        <div class="l-box box"><%= item.name %></div>
+  <% @items.each do |item| %>
+    <div class="pure-u-md-1-4">
+      <div class="box">
+        <%= item.name %>
       </div>
-    <%end%>
-  </div>
+    </div>
+  <% end %>
 </div>

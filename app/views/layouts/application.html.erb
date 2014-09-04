@@ -5,10 +5,23 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+  <![endif]-->
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="pure-menu pure-menu-open pure-menu-horizontal">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li class="pure-menu-selected"><a href="#">My Account</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <div><%= yield %></div>
+  </div>
 </body>
 </html>
