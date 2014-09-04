@@ -12,5 +12,6 @@ class ItemsController < ApplicationController
     @items = [fake_item_1, fake_item_2, fake_item_3, 
               fake_item_4, fake_item_5, fake_item_6,
               fake_item_7,fake_item_8,fake_item_9]
+    @image = "http://image.slidesharecdn.com/embracingcapybara-140103052245-phpapp02/95/embracing-capybara-1-638.jpg?cb=1388750822"
   end
 end
