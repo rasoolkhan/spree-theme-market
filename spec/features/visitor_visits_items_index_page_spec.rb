@@ -14,6 +14,6 @@ describe "the items index page" do
   end
   
   it "shows 9 images" do
-    expect(page).to have_css('img'), :count => 9
+    expect(page).to have_css('.box img'), :count => 9
   end
 end
