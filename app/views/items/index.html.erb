@@ -2,7 +2,8 @@
   <% @items.each do |item| %>
     <div class="pure-u-md-1-4">
       <div class="box">
-        <%= item.name %>
+        <div><%= item.name %></div>
+        <div><img src= <%= item.image_preview %> ></div>
       </div>
     </div>
   <% end %>
