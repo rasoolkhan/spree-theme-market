@@ -17,6 +17,10 @@ module Admin
       @item.save
       redirect_to admin_item_path(@item)
     end
+    
+    def edit
+      @item = Item.find(params[:id])
+    end
     end
   end
 end

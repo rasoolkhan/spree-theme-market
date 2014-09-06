@@ -1,0 +1,34 @@
+<h1>Update Theme Details</h1>
+<div>
+  <%= form_for :item, url: admin_item_path(@item), method: :patch do |f| %>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+   
+    <p>
+      <%= f.label :description %><br>
+      <%= f.text_field :description %>
+    </p>
+    
+    <p>
+      <%= f.label :price %><br>
+      <%= f.text_field :price %>
+    </p>
+    
+    <p>
+      <%= f.label :code %><br>
+      <%= f.text_field :code %>
+    </p>
+
+    <p>
+      <%= f.label :image_preview %><br>
+      <img src=<%= @item.image_preview %> /><br>
+      <%= f.text_field :image_preview %>
+    </p>
+
+    <p>
+        <%= f.submit %>
+    </p>
+  <% end %>
+</div>
