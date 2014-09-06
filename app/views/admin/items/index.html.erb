@@ -1,6 +1,6 @@
 <h1>My Themes</h1>
 <div>
-  <% @items.each do |item| %>
+  <% @presenter.items.each do |item| %>
     <div class="pure-u-md-1-4">
       <div class="box">
         <div><%= link_to(item.name, admin_item_path(item)) %></div>
