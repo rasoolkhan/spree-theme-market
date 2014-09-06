@@ -9,7 +9,7 @@ class ItemsPresenter
     fake_item_7 = Item.new(name: "Wednesday theme", description: "Spring colors", image_preview: "http://placebear.com/300/200")
     fake_item_8 = Item.new(name: "Thursday theme", description: "Spring colors", image_preview: "http://placebear.com/300/200")
     fake_item_9 = Item.new(name: "Friday theme", description: "Spring colors", image_preview: "http://placebear.com/300/200")
-    @items = [fake_item_1, fake_item_2, fake_item_3, 
+    @presenter.items = [fake_item_1, fake_item_2, fake_item_3, 
               fake_item_4, fake_item_5, fake_item_6,
               fake_item_7,fake_item_8,fake_item_9]  
   end
