@@ -2,7 +2,6 @@ module Admin
   class ItemsController < ApplicationController
     def index
       @presenter = ItemsPresenter.new
-      # @items = Item.all
     end
     
     def show
