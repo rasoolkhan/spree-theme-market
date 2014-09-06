@@ -31,6 +31,11 @@ module Admin
     def edit
       @item = Item.find(params[:id])
     end
+    
+    private
+    
+    def item_params
+      params.require(:item).permit(:name, :description, :price, :code, :image_preview)
     end
   end
 end
