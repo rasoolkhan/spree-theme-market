@@ -1,5 +1,5 @@
 module Admin
-  class ItemsController < ApplicationController
+  class ItemsController < AdminController
     def index
       @items = Item.all
     end
