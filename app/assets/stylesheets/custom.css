@@ -1,11 +1,110 @@
+
+.button {
+    background-color: #5BC5BF;
+    border-color: #5BC5BF;
+    color: white;
+    font-variant: bold;
+    padding: 5px;
+}
+
+.button input {
+    background-color: #5BC5BF;
+    border-color: #5BC5BF;
+    color: white;
+    font-variant: bold;
+    padding: 5px;
+}
+
+h1 {
+ color: #ED1D24;
+}
+
 .box {
-  color: red;
-  border: solid black;
   padding: 10px;
   margin: 10px;
   height: 250px;
+  text-decoration: none;
+  font-size: large;
 }
 
 .container {
-  margin: 30px;
+  margin: 50px;
 }
+
+a {
+  color: #5BC5BF;
+  text-decoration: none;
+  font-weight: bold
+}
+
+#menu {
+    background-color: #5BC5BF;
+  height: 50px;
+}
+
+.menu-text {
+  margin-left:50px;
+  text-decoration-color: white;
+  font-size: large;
+  padding-top: 5px;
+   color: #ED1D24;
+
+}
+
+.box .item-name {
+     color: #ED1D24;
+   text-decoration: none;
+
+}
+.header {
+  padding-left: 60px
+  
+}
+.item-name {
+  text-decoration: none;
+  font-size: large;
+  text-align: center;
+  font-family: verdana;
+  font-weight: bold;  
+}
+
+#menu li a {
+   color: #ED1D24;
+   text-decoration: none;
+
+}
+
+.box a {
+   color: #ED1D24;
+   text-decoration: none;
+
+}
+.item-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.item-price {
+  text-align: center;
+}
+
+.item-date {
+  font-size: small;
+  text-align: center
+}
+
+.form {
+  background-color: #F9ECD1 ;
+  width: 300px;
+  padding: 20px;
+}
+
+h2 {
+  font-size: x-large;
+  font-weight: bold;
+  margin-bottom: 10px; 
+  color: #ED1D24;
+}
+
+
