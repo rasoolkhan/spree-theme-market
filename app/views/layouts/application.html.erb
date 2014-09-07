@@ -16,8 +16,8 @@
 <body>
   <div class="pure-menu pure-menu-open pure-menu-horizontal">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li class="pure-menu-selected"><a href="#">My Account</a></li>
+      <li><%= link_to('Home', items_path)%></li>
+      <li><%= link_to('Admin', admin_items_path) %></li>
     </ul>
   </div>
   <div class="container">

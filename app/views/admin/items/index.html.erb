@@ -1,0 +1,14 @@
+<h1>My Themes</h1>
+<div>
+  <% @items.each do |item| %>
+    <div class="pure-u-md-1-4">
+      <div class="box">
+        <div><%= link_to(item.name, admin_item_path(item)) %></div>
+        <div><img src= <%= item.image_preview %> ></div>
+        <div><p>Uploaded: <%= item.created_at.to_date %></p></div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div><%= link_to('Add new theme', new_admin_item_path) %></a></div>
