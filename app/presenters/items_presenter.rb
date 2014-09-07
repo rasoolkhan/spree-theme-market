@@ -1,5 +1,7 @@
 class ItemsPresenter
-  def items
-    Items.all
+  attr_reader :items
+ 
+  def initialize(items)
+    @items = items
   end
 end

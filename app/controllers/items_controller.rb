@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   def index
-    @presenter = ItemsPresenter.new
+    items = Item.all
+    @presenter = ItemsPresenter.new(items)
   end
 end
