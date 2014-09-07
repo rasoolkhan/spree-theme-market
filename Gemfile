@@ -35,7 +35,7 @@ gem 'capybara'
 
 gem 'factory_girl_rails'
 
-gem 'faker'
+gem 'ffaker'
 group :production do 
   gem 'rails_12factor'
 end
