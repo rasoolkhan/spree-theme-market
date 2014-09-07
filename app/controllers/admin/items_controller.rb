@@ -1,7 +1,8 @@
 module Admin
   class ItemsController < AdminController
     def index
-      @presenter = ItemsPresenter.new
+      items = Item.all
+      @presenter = ItemsPresenter.new(items)
     end
     
     def show
