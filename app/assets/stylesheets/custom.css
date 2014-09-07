@@ -9,3 +9,7 @@
 .container {
   margin: 30px;
 }
+
+.alert {
+  color: red;
+}
