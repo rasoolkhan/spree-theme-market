@@ -1,18 +1,13 @@
 <div class="header">
-
-<h1>My Themes</h1>
-<div>
-
-<%= button_to 'Add new theme', new_admin_item_path, :method => "get" %>
-
-</div>
+  <h1>My Themes</h1>
+<div><%= button_to 'ADD NEW THEME', new_admin_item_path, :method => "get", :class => "button" %></div>
 <div class="products">
   <% @presenter.items.each do |item| %>
     <div class="pure-u-md-1-4">
       <div class="box">
         <div class="item-name"><%= link_to(item.name, admin_item_path(item)) %></div>
-        <div><img class="item-image" src= <%= item.image_preview %> ></div>
-        <div><p class="item-date">Uploaded: <%= item.created_at.to_date %></p></div>
+        <div><%= link_to(image_tag(item.image_preview), admin_item_path(item), :class => "item-image")%></div>
+        <div class="item-date">Uploaded: <%= item.created_at.to_date %></div>
       </div>
     </div>
   <% end %>

@@ -1,5 +1,5 @@
 <h2>Update Theme Details</h2>
-<div>
+<div class="subcontainer">
   <%= form_for :item, url: admin_item_path(@item), method: :patch do |f| %>
     <p>
       <%= f.label :name %><br>
@@ -28,7 +28,7 @@
     </p>
 
     <p>
-        <%= f.submit %>
+      <%= f.submit %>
     </p>
   <% end %>
 </div>

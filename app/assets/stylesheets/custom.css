@@ -1,22 +1,48 @@
-
-.button {
-    background-color: #5BC5BF;
-    border-color: #5BC5BF;
-    color: white;
-    font-variant: bold;
-    padding: 5px;
+.pure-menu li a:hover, pure-menu li a:focus {
+  background: none !important ;
 }
 
-.button input {
-    background-color: #5BC5BF;
-    border-color: #5BC5BF;
-    color: white;
-    font-variant: bold;
-    padding: 5px;
+#menu {
+  background-color: #ffcc33;
 }
 
-h1 {
- color: #ED1D24;
+.menu-text {
+  margin-left:50px;
+  text-decoration-color: #ffcc33;
+  font-size: large;
+  padding-top: 5px;
+  margin: 0px;
+}
+
+.menu-text a {
+  color: white;
+}
+
+a {
+  color: #ffcc33;
+  text-decoration: none;
+  font-weight: bold
+}
+
+.header {
+  padding-left: 60px
+}
+
+#menu ul {
+  margin-left: 90px;
+}
+
+#menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  margin: 50px;
+}
+
+.subcontainer {
+  padding-left: 100px;
 }
 
 .box {
@@ -27,62 +53,81 @@ h1 {
   font-size: large;
 }
 
-.container {
-  margin: 50px;
-}
-
-a {
-  color: #5BC5BF;
-  text-decoration: none;
-  font-weight: bold
-}
-
-#menu {
-    background-color: #5BC5BF;
-  height: 50px;
-}
-
-.menu-text {
-  margin-left:50px;
-  text-decoration-color: white;
-  font-size: large;
-  padding-top: 5px;
-   color: #ED1D24;
-
+.box a {
+   color: #ffcc33;
+   text-decoration: none;
 }
 
 .box .item-name {
-     color: #ED1D24;
+     color: #ffcc33;
    text-decoration: none;
+}
 
+h2 {
+  font-size: x-large;
+  font-weight: bold;
+  margin-bottom: 10px; 
+  color: black;
 }
-.header {
-  padding-left: 60px
-  
+
+a:link, a:visited, a:hover, a:active {
+text-decoration: none;
 }
+
+.rhs-link {
+  float: right;
+  margin-right: 200px;
+}
+
+.button {
+    background-color: #ffcc33;
+    border-color: #ffcc33;
+    color: white;
+    font-variant: bold;
+    padding: 8px;
+}
+
+.delete-button {
+    background-color: red;
+    border-color: red;
+    color: white;
+    font-variant: bold;
+    padding: 8px;
+    display: inline-block;
+    float:right;
+}
+
+.form-button {
+    background-color: black;
+    border-color: black;
+    color: white;
+    font-variant: bold;
+    padding: 5px;
+}
+
+.form {
+  background-color: #ffcc33 ;
+  width: 300px;
+  padding: 20px;
+}
+
+.show-image {
+  height: 500px;
+  width: 500px;
+}
+
+.item-image, a img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
 .item-name {
   text-decoration: none;
   font-size: large;
   text-align: center;
   font-family: verdana;
   font-weight: bold;  
-}
-
-#menu li a {
-   color: #ED1D24;
-   text-decoration: none;
-
-}
-
-.box a {
-   color: #ED1D24;
-   text-decoration: none;
-
-}
-.item-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto
 }
 
 .item-price {
@@ -93,18 +138,3 @@ a {
   font-size: small;
   text-align: center
 }
-
-.form {
-  background-color: #F9ECD1 ;
-  width: 300px;
-  padding: 20px;
-}
-
-h2 {
-  font-size: x-large;
-  font-weight: bold;
-  margin-bottom: 10px; 
-  color: #ED1D24;
-}
-
-

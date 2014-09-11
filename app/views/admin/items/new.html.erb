@@ -1,34 +1,33 @@
 <h2>Add a New Theme</h2>
-
-<div class="form">
-<%= form_for :item, url: admin_items_path do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
- 
-   <p>
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </p>
-  
+<div class="subcontainer">
+  <%= form_for :item, url: admin_items_path do |f| %>
     <p>
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </p>
-  
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+   
+     <p>
+      <%= f.label :description %><br>
+      <%= f.text_field :description %>
+    </p>
+    
     <p>
-    <%= f.label :code %><br>
-    <%= f.text_field :code %>
-  </p>
+      <%= f.label :price %><br>
+      <%= f.text_field :price %>
+    </p>
+    
+    <p>
+      <%= f.label :code %><br>
+      <%= f.text_field :code %>
+    </p>
 
     <p>
-    <%= f.label :image_preview %><br>
-    <%= f.text_field :image_preview %>
-  </p>
+      <%= f.label :image_preview %><br>
+      <%= f.text_field :image_preview %>
+    </p>
 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+    <p>
+      <%= f.button :submit, :class => "form-button" %>
+    </p>
+  <% end %>
 </div>
