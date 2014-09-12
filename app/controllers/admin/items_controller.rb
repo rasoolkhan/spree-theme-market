@@ -14,17 +14,24 @@ module Admin
     
     def create
       @item = Item.new(item_params)
-      @item.save
-      redirect_to admin_item_path(@item)
+      if @item.save
+        flash[:notice] = 'Successfully saved theme'
+        redirect_to admin_item_url(@item)
+      else
+        flash[:notice] = 'Theme not saved, please update details'
+        redirect_to new_admin_item_path
+      end
     end
     
     def update
       @item = Item.find(params[:id])
       
       if @item.update(item_params)
-        redirect_to admin_item_path(@item)
+        redirect_to admin_item_url(@item)
+        flash[:notice] = "Successfully updated"
       else
         render 'edit'
+        flash[:notice] = "Updates not saved"
       end
     end
     
@@ -35,7 +42,7 @@ module Admin
     def destroy
       @item = Item.find(params[:id])
       @item.destroy
-      redirect_to admin_items_path
+      redirect_to admin_items_url
     end
     
     private
