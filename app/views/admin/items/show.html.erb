@@ -1,17 +1,17 @@
 <div class="subcontainer">
-  <div class="rhs-link"><h2><%= link_to('Back to My Themes', admin_items_path) %></h2></div>
-  <h2><%= @item.name %></h2>
+  <div class="rhs-link"><h2><%= link_to('Back to My Themes', admin_item_path) %></h2></div>
+  <h2><%= @item_presenter.name %></h2>
   <div>
-    <img class="show-image" src="<%= @item.image_preview %>"/>
-    <p><b>Description:</b> <%= @item.description %></p>
-    <p><b>Price:</b> $<%= @item.price %></p>
-    <p><b>Code: </b><%= @item.code %></p>
-    <p><b>Added on:</b> <%= @item.created_at.to_date %></p>
-    <p><b>Last Updated on:</b> <%= @item.updated_at.to_date %></p>
+    <img class="show-image" src="<%= @item_presenter.image_preview %>"/>
+    <p><b>Description:</b> <%= @item_presenter.description %></p>
+    <p><b>Price:</b> $<%= @item_presenter.price %></p>
+    <p><b>Code: </b><%= @item_presenter.code %></p>
+    <p><b>Added on:</b> <%= @item_presenter.created_date %></p>
+    <p><b>Last Updated on:</b> <%= @item_presenter.updated_date %></p>
   </div>
     <div class="edit-delete">
-      <%= button_to 'Edit Details', edit_admin_item_path(@item), :method => "get", :class => "button" %>
-      <%= button_to 'Delete This Theme', admin_item_path(@item), method: :delete, data: { confirm: 'Are You Sure?'}, :class => "delete-button" %>
+      <%= button_to 'Edit Details', edit_admin_item_path(@item_presenter), :method => "get", :class => "button" %>
+      <%= button_to 'Delete This Theme', admin_item_path(@item_presenter), method: :delete, data: { confirm: 'Are You Sure?'}, :class => "delete-button" %>
     </div>
   </div>
 </div>

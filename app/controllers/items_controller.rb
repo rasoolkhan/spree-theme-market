@@ -1,6 +1,5 @@
 class ItemsController < ApplicationController
   def index
-    items = Item.all
-    @presenter = ItemsPresenter.new(items)
+    @item_presenters = Item.all.map {|item| ItemPresenter.new(item)}
   end
 end
