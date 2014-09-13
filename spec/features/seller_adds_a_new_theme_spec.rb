@@ -6,7 +6,6 @@ feature "User adds a new theme" do
     login_with('tracy','super_secure')
     visit items_path
     click_link('Admin')
-    save_and_open_page
     click_button('ADD NEW THEME')
     fill_in 'Name', :with => 'Tracy'
     fill_in 'Description', :with => 'Some Lorem Ipsum'

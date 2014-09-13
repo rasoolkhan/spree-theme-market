@@ -15,8 +15,13 @@ module Admin
     
     def create
       @item = Item.new(item_params)
-      @item.save
-      redirect_to admin_item_path(@item)
+      if @item.save
+        flash[:notice] = 'Successfully saved theme'
+        redirect_to admin_item_url(@item)
+      else
+        flash[:notice] = 'Theme not saved, please update details'
+        redirect_to new_admin_item_path
+      end
     end
     
     def update
@@ -24,8 +29,10 @@ module Admin
       
       if @item.update(item_params)
         redirect_to admin_item_path(@item)
+        flash[:notice] = "Successfully updated"
       else
         render 'edit'
+        flash[:notice] = "Updates not saved"
       end
     end
     
