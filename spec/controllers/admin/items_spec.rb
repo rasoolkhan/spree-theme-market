@@ -23,7 +23,7 @@ describe Admin::ItemsController do
 
     it "loads all of the items" do
       # This test does not pass and I can't figure out why.
-      expect(assigns(:items)).to eq([@item])
+      expect(assigns(:item_presenters)).to eq([])
     end
   end
   

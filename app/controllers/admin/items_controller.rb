@@ -5,7 +5,8 @@ module Admin
     end
     
     def show
-      @item_presenter = ::ItemPresenter.new(Item.find(params[:id]))
+      item = Item.find(params[:id])
+      @item_presenter = ::ItemPresenter.new(item)
     end
     
     def new

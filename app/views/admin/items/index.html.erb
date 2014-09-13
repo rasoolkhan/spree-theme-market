@@ -7,7 +7,7 @@
       <div class="box">
         <div class="item-name"><%= link_to(item.name, admin_item_path(item.id)) %></div>
         <div><%= link_to(image_tag(item.image_preview), admin_item_path(item.id), :id => "item-image")%></div>
-        <div class="item-date">Uploaded: <%= item.created_date %></div>
+        <div class="item-date">Uploaded: <%= item.created_on %></div>
       </div>
     </div>
   <% end %>

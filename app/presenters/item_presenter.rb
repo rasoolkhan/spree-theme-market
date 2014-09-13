@@ -6,11 +6,11 @@ class ItemPresenter
     self.item = item
   end
   
-  def created_date
+  def created_on
     item.created_at.to_date
   end
   
-  def updated_date
+  def updated_on
     item.updated_at.to_date
   end
 end
