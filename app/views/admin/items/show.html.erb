@@ -10,8 +10,8 @@
     <p><b>Last Updated on:</b> <%= @item_presenter.updated_on %></p>
   </div>
     <div class="edit-delete">
-      <%= button_to 'Edit Details', edit_admin_item_path(@item_presenter.id), :method => "get", :class => "button" %>
-      <%= button_to 'Delete This Theme', admin_item_path(@item_presenter), method: :delete, data: { confirm: 'Are You Sure?'}, :class => "delete-button" %>
+      <%= button_to 'Edit Details', edit_admin_item_path(@item_presenter.id), method: "get", class: "button" %>
+      <%= button_to 'Delete This Theme', admin_item_path(@item_presenter), method: :delete, data: { confirm: 'Are You Sure?'}, class: "delete-button" %>
     </div>
   </div>
 </div>

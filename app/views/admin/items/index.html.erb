@@ -1,12 +1,12 @@
 <div class="header">
   <h1>My Themes</h1>
-<div><%= button_to 'ADD NEW THEME', new_admin_item_path, :method => "get", :class => "button" %></div>
+<div><%= button_to 'ADD NEW THEME', new_admin_item_path, method: "get", class: "button" %></div>
 <div class="products">
   <% @item_presenters.each do |item| %>
     <div class="pure-u-md-1-4">
       <div class="box">
         <div class="item-name"><%= link_to(item.name, admin_item_path(item.id)) %></div>
-        <div><%= link_to(image_tag(item.image_preview), admin_item_path(item.id), :id => "item-image")%></div>
+        <div><%= link_to(image_tag(item.image_preview), admin_item_path(item.id), id: "item-image")%></div>
         <div class="item-date">Uploaded: <%= item.created_on %></div>
       </div>
     </div>

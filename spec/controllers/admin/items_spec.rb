@@ -2,7 +2,7 @@ require "spec_helper"
 require "rails_helper"
 
 describe Admin::ItemsController do
-  describe "#index" do
+  describe "GET #index" do
     before do
       # Below I am trying to make something to overcome our http authentication
       # It doesn't work, so in my files I comment out the authentication line in 
@@ -18,16 +18,16 @@ describe Admin::ItemsController do
     end
     
     it "renders items/index template" do
-      expect(response).to render_template("index") or admin/items/index
+      expect(response).to render_template("admin/items/index")
     end
 
     it "loads all of the items" do
       # This test does not pass and I can't figure out why.
-      expect(assigns(:item_presenters)).to eq([])
+      expect(assigns(:item_presenters)).to eq(ItemPresenter.new(@item))
     end
   end
   
-  describe "#new" do
+  describe "GET #new" do
     before do
       # allow_any_instance_of(AdminController).to receive(:http_basic_authenticate_with) { true }
       get :new
@@ -38,21 +38,21 @@ describe Admin::ItemsController do
     end
     
     it "renders items/new template" do
-      expect(response).to render_template("new") or admin/items/new
+      expect(response).to render_template("admin/items/new")
     end
   end
     
   describe "#create" do
   end
 
-  describe "#show" do 
+  describe "GET #show" do 
   end
   
-  describe "#edit" do
+  describe "GET #edit" do
 
   end
   
-  describe "#delete" do
+  describe "#destroy" do
 
   end
 end
