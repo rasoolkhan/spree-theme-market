@@ -28,7 +28,7 @@ module Admin
       @item = Item.find(params[:id])
       
       if @item.update(item_params)
-        redirect_to admin_item_path(@item)
+        redirect_to admin_item_url(@item)
         flash[:notice] = "Successfully updated"
       else
         render 'edit'
@@ -43,7 +43,7 @@ module Admin
     def destroy
       @item = Item.find(params[:id])
       @item.destroy
-      redirect_to admin_items_path
+      redirect_to admin_items_url
     end
     
     private
