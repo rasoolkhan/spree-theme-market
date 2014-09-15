@@ -1,15 +1,17 @@
-<h1><%= @item.name %></h1>
-<div>
-  <img src="<%= @item.image_preview %>"/>
-  <p>Description: <%= @item.description %></p>
-  <p>Price: $<%= @item.price %></p>
-  <p>Code: <%= @item.code %></p>
-  <p>Added on: <%= @item.created_at.to_date %></p>
-  <p>Last Updated on: <%= @item.updated_at.to_date %></p>
+<div class="subcontainer">
+  <div class="rhs-link"><h2><%= link_to('Back to My Themes', admin_items_path) %></h2></div>
+  <h2><%= @item_presenter.name %></h2>
+  <div>
+    <img class="show-image" src="<%= @item_presenter.image_preview %>"/>
+    <p><b>Description:</b> <%= @item_presenter.description %></p>
+    <p><b>Price:</b> $<%= @item_presenter.price %></p>
+    <p><b>Code: </b><%= @item_presenter.code %></p>
+    <p><b>Added on:</b> <%= @item_presenter.created_on %></p>
+    <p><b>Last Updated on:</b> <%= @item_presenter.updated_on %></p>
+  </div>
+    <div class="edit-delete">
+      <%= button_to 'Edit Details', edit_admin_item_path(@item_presenter.id), method: "get", class: "button" %>
+      <%= button_to 'Delete This Theme', admin_item_path(@item_presenter), method: :delete, data: { confirm: 'Are You Sure?'}, class: "delete-button" %>
+    </div>
+  </div>
 </div>
-
-<div>
-  <p><%= link_to('Edit', edit_admin_item_path(@item))%> | <%= link_to('Delete this Theme', admin_item_path(@item), method: :delete, data: { confirm: 'Are You Sure?'}) %> </p>
-</div>
-
-<div><p><%= link_to('Back to My Themes', admin_items_path) %></p></div>

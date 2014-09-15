@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>SpreeThemeStore</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--[if lte IE 8]>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
-  <![endif]-->
-</head>
-<body>
-  <div class="pure-menu pure-menu-open pure-menu-horizontal">
-    <ul>
-      <li><%= link_to('Home', items_path)%></li>
-      <li><%= link_to('Admin', admin_items_path) %></li>
-    </ul>
-  </div>
-  <div class="container">
-    <div>
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, class: "alert" %>
-      <% end %>
+  <head>
+    <title>SpreeThemeStore</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]>
+      <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+    <![endif]-->
+  </head>
+  <body>
+    <div id="menu" class="pure-menu pure-menu-open pure-menu-horizontal">
+      <ul>
+        <li class="menu-text"><%= link_to('Home', items_path)%></li>
+        <li class="menu-text"><%= link_to('Admin', admin_items_path)%></li>
+      </ul>
     </div>
-    <div><%= yield %></div>
-  </div>
-</body>
+    <div class="container">
+      <div>
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: "alert alert-info" %>
+      <% end %>
+      </div>
+      <div><%= yield %></div>
+    </div>
+  </body>
 </html>

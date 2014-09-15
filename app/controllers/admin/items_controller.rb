@@ -1,11 +1,12 @@
 module Admin
   class ItemsController < AdminController
     def index
-      @items = Item.all
+      @item_presenters = Item.all.map { |item| ::ItemPresenter.new(item) }
     end
     
     def show
-      @item = Item.find(params[:id])
+      item = Item.find(params[:id])
+      @item_presenter = ::ItemPresenter.new(item)
     end
     
     def new

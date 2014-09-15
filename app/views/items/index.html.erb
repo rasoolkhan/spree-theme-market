@@ -1,10 +1,13 @@
-<h1>Browse Spree Themes</h1>
-<div>
-  <% @presenter.items.each do |item| %>
+<div class="header">
+  <h1>Browse Spree Themes</h1>
+</div>
+<div class="products">
+  <% @item_presenters.each do |item| %>
     <div class="pure-u-md-1-4">
       <div class="box">
-        <div><%= item.name %></div>
-        <div><img src= <%= item.image_preview %> ></div>
+        <div class = "item-name"><%= item.name %></div>
+        <div><img class="item-image" src= <%= item.image_preview %> ></div>
+        <div class = "item-price">$<%= item.price %></div>
       </div>
     </div>
   <% end %>
