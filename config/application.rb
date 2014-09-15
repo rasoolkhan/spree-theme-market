@@ -6,6 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Paperclip.options[:command_path] = "/usr/local/bin/"
+
 module SpreeThemeStore
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
