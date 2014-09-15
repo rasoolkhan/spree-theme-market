@@ -3,12 +3,10 @@ require "rails_helper"
 
 describe Admin::ItemsController do
   describe "GET #index" do
-    before do
-      # Below I am trying to make something to overcome our http authentication
-      # It doesn't work, so in my files I comment out the authentication line in 
-      # admin_controller.rb
+    include AuthHelper
       
-      # allow_any_instance_of(AdminController).to receive(:http_basic_authenticate_with) { true }
+    before do
+      http_login
       @item = FactoryGirl.create(:item)
       get :index
     end
@@ -28,8 +26,9 @@ describe Admin::ItemsController do
   end
   
   describe "GET #new" do
+    include AuthHelper
     before do
-      # allow_any_instance_of(AdminController).to receive(:http_basic_authenticate_with) { true }
+      http_login
       get :new
     end
        
@@ -43,17 +42,33 @@ describe Admin::ItemsController do
   end
     
   describe "#create" do
+    include AuthHelper
+    before do
+      http_login
+    end
   end
 
   describe "GET #show" do 
+    include AuthHelper
+    before do
+      http_login
+      get :show
+    end
   end
   
   describe "GET #edit" do
-
+    include AuthHelper
+    before do
+      http_login
+      get :edit
+    end
   end
   
   describe "#destroy" do
-
+    include AuthHelper
+    before do
+      http_login
+    end
   end
 end
 
