@@ -1,25 +1,26 @@
+$accent: #ffcc33;
+ 
 .pure-menu li a:hover, pure-menu li a:focus {
   background: none !important ;
 }
 
 #menu {
-  background-color: #ffcc33;
+  background-color: $accent;
 }
 
 .menu-text {
   margin-left:50px;
-  text-decoration-color: #ffcc33;
+  text-decoration-color: $accent;
   font-size: large;
   padding-top: 5px;
   margin: 0px;
-}
-
-.menu-text a {
-  color: white;
+  a {
+    color: white;
+  }
 }
 
 a {
-  color: #ffcc33;
+  color: $accent;
   text-decoration: none;
   font-weight: bold
 }
@@ -28,13 +29,14 @@ a {
   padding-left: 60px
 }
 
-#menu ul {
+#menu  {  
+  ul {
   margin-left: 90px;
 }
-
-#menu li a {
+  li a {
   color: white;
   text-decoration: none;
+  }
 }
 
 .container {
@@ -51,16 +53,15 @@ a {
   height: 250px;
   text-decoration: none;
   font-size: large;
-}
-
-.box a {
-   color: #ffcc33;
+  a {
+   color: $accent;
    text-decoration: none;
-}
+  }
 
-.box .item-name {
-  color: #ffcc33;
-  text-decoration: none;
+  .item-name {
+    color: $accent;
+    text-decoration: none;
+  }
 }
 
 h2 {
@@ -80,8 +81,8 @@ text-decoration: none;
 }
 
 .button {
-  background-color: #ffcc33;
-  border-color: #ffcc33;
+  background-color: $accent;
+  border-color: $accent;
   color: white;
   font-variant: bold;
   padding: 8px;
@@ -106,7 +107,7 @@ text-decoration: none;
 }
 
 .form {
-  background-color: #ffcc33 ;
+  background-color: $accent ;
   width: 300px;
   padding: 20px;
 }
