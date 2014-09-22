@@ -2,7 +2,7 @@
   <div class="rhs-link"><h2><%= link_to('Back to My Themes', admin_items_path) %></h2></div>
   <h2><%= @item_presenter.name %></h2>
   <div>
-    <img class="show-image" src="<%= @item_presenter.image_preview %>"/>
+    <%= image_tag @item_presenter.attachment.url %>
     <p><b>Description:</b> <%= @item_presenter.description %></p>
     <p><b>Price:</b> $<%= @item_presenter.price %></p>
     <p><b>Code: </b><%= @item_presenter.code %></p>

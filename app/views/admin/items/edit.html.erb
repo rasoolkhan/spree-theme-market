@@ -1,6 +1,6 @@
 <h2>Update Theme Details</h2>
 <div class="subcontainer">
-  <%= form_for :item, url: admin_item_path(@item), method: :patch do |f| %>
+  <%= form_for :item, url: admin_item_path(@item), :html => { :multipart => true }, method: :patch do |f| %>
     <p>
       <%= f.label :name %><br>
       <%= f.text_field :name %>
@@ -23,9 +23,10 @@
 
     <p>
       <%= f.label :image_preview %><br>
-      <img src=<%= @item.image_preview %> /><br>
       <%= f.text_field :image_preview %>
     </p>
+    
+    <p><%= f.file_field :attachment %></p>
 
     <p>
       <%= f.submit %>

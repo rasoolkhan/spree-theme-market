@@ -1,6 +1,6 @@
 class ItemPresenter
   attr_accessor :item
-  delegate :name, :description, :price, :code, :image_preview, :id, to: :item
+  delegate :name, :description, :price, :code, :image_preview, :attachment, :id, to: :item
   
   def initialize(item)
     self.item = item
