@@ -42,3 +42,5 @@ end
 
 gem "paperclip", "~> 4.2"
 
+gem 'bcrypt', '~> 3.1.7'
+
