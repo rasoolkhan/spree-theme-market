@@ -17,7 +17,7 @@ feature "User signs up" do
     given_no_users_logged_in
     when_i_visit('/admin/items')
     login_with_incorrect_details('wrong email','wrong password')
-    then_i_should_see_flash_error
+    then_i_should_see_flash_error_with_message('Invalid email or password')
   end
 end
 
@@ -58,8 +58,8 @@ def then_i_should_see_my_item_page
   expect(page).to have_content('My Themes')
 end
 
-def then_i_should_see_flash_error
-  expect(page).to have_content('Invalid email or password')
+def then_i_should_see_flash_error_with_message(message)
+  expect(page).to have_content(message)
 end
 
 def uri
