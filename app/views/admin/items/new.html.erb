@@ -1,32 +1,32 @@
 <h2>Add a New Theme</h2>
 <div class="subcontainer">
-  <%= form_for :item, url: admin_items_path, :html => { :multipart => true } do |f| %>
+  <%= form_for @item_creation_form, url: admin_items_path, :html => { :multipart => true } do |f| %>
     <p>
       <%= f.label :name %><br>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, :name => 'item[name]' %>
     </p>
    
     <p>
       <%= f.label :description %><br>
-      <%= f.text_field :description %>
+      <%= f.text_field :description, :name => 'item[description]' %>
     </p>
     
     <p>
       <%= f.label :price %><br>
-      <%= f.text_field :price %>
+      <%= f.text_field :price, :name => 'item[price]' %>
     </p>
     
     <p>
       <%= f.label :code %><br>
-      <%= f.text_field :code %>
+      <%= f.text_field :code, :name => 'item[code]' %>
     </p>
 
     <p>
       <%= f.label :image_preview %><br>
-      <%= f.text_field :image_preview %>
+      <%= f.text_field :image_preview, :name => 'item[image_preview]' %>
     </p>
 
-    <p><%= f.file_field :attachment %></p>
+    <p><%= f.file_field :attachment, :name => 'item[attachment]' %></p>
 
     <p>
       <%= f.button :submit, class: "form-button" %>

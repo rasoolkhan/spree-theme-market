@@ -10,13 +10,13 @@ module Admin
     end
     
     def new
-      @item = Item.new
+      @item_creation_form = ItemForm.new(Item.new)
     end
     
     def create
-      @item = Item.new(item_params)
-
-      if @item.save
+      @item_creation_form = ItemForm.new(Item.new)
+      
+      if @item_creation_form.validate(item_params) && save_item
         flash[:notice] = 'Successfully saved theme'
         redirect_to admin_item_url(@item)
       else
@@ -48,6 +48,14 @@ module Admin
     end
     
     private
+    
+    
+    def save_item
+      @item_creation_form.save do |hash|
+        @item = Item.new(hash)
+        @item.save
+      end
+    end
     
     def item_params
       params.require(:item).permit(:name, :description, :price, :code, :image_preview, :attachment)

@@ -39,7 +39,7 @@ group :test do
 end
 
 gem 'purecss-rails'
-
+gem 'reform'
 
 group :production do 
   gem 'rails_12factor'
