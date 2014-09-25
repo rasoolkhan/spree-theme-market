@@ -24,6 +24,6 @@ module SpreeThemeStore
     config.generators do |generator|
       generator.test_framework = :rspec
     end
-    config.autoload_paths += %W( #{Rails.root}/app/presenters )
+    config.autoload_paths += %W( #{Rails.root}/app/presenters #{Rails.root}/app/services )
   end
 end
