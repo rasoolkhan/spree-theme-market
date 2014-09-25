@@ -19,8 +19,6 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 
-# https://github.com/plataformatec/devise/wiki/How-To:-Test-with-Capybara
-
 Capybara.configure do |config|
   # config.app_host   = 'http://spree-market.com'
   # config.server_port = 3000
