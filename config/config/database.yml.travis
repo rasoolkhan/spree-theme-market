@@ -1,5 +1,0 @@
-test:
-  adapter: postgresql
-  database: spree_market_test
-  username: postgres
-  encoding: unicode
