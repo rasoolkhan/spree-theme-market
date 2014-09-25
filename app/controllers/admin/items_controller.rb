@@ -15,6 +15,7 @@ module Admin
     
     def create
       @item = Item.new(item_params)
+
       if @item.save
         flash[:notice] = 'Successfully saved theme'
         redirect_to admin_item_url(@item)
