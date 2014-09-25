@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.4'
+gem 'rails', '4.1.5'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -29,16 +29,21 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 end
 
+group :test do
+  gem 'selenium-webdriver'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+end
+
 gem 'purecss-rails'
 
-gem 'capybara'
 
-gem 'factory_girl_rails'
-
-gem 'ffaker'
 group :production do 
   gem 'rails_12factor'
 end
 
 gem "paperclip", "~> 4.2"
+
+gem 'bcrypt', '~> 3.1.7'
 
