@@ -47,6 +47,6 @@ group :production do
 end
 
 gem "paperclip", "~> 4.2"
-
+gem 'aws-sdk'
 gem 'bcrypt', '~> 3.1.7'
 
