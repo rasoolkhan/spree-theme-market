@@ -50,3 +50,5 @@ gem "paperclip", "~> 4.2"
 gem 'aws-sdk'
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'ffi', '1.9.4'
+

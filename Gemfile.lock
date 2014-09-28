@@ -213,6 +213,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   factory_girl_rails
   ffaker
+  ffi (= 1.9.4)
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 4.2)
