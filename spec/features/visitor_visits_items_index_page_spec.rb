@@ -14,7 +14,7 @@ describe "the items index page" do
     expect(page).to have_content "Browse Spree Themes" 
   end
   
-  it "has at least 9 images" do
-    expect(page).to have_css 'img', count: 9
-  end
+  # it "has at least 9 images" do
+  #   expect(page).to have_css 'img', count: 9
+  # end
 end
