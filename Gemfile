@@ -12,6 +12,8 @@ gem 'turbolinks'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'factory_girl_rails'
 end
 
@@ -22,6 +24,7 @@ group :test do
 end
 
 gem 'purecss-rails'
+gem 'reform'
 
 group :production do 
   gem 'rails_12factor'
@@ -29,4 +32,5 @@ group :production do
 end
 
 gem "paperclip", "~> 4.2"
-gem 'bcrypt'
+gem 'aws-sdk'
+gem 'bcrypt', '~> 3.1.7'
