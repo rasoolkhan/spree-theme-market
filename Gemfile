@@ -26,6 +26,7 @@ gem 'purecss-rails'
 group :production do 
   gem 'rails_12factor'
   gem 'thin'
+  gem 'unicorn'
 end
 
 gem "paperclip", "~> 4.2"
