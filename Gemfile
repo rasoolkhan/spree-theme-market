@@ -28,7 +28,6 @@ gem 'reform'
 
 group :production do 
   gem 'rails_12factor'
-  gem 'thin'
   gem 'unicorn'
 end
 
