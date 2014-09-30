@@ -35,3 +35,7 @@ Then start your server
 ## Test
 
 `bundle exec rake spec`
+
+## Deployment
+
+Deploy using heroku, please set up heroku then `git push heroku master`
