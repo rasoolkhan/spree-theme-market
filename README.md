@@ -9,10 +9,10 @@ The Theme Market for Spree was developed as part of the Rails Girls Summer of Co
 
 ## Our Stack
 
-PostgreSQL 9.3.4
-Ruby 2.0.0.
-Rails 4.1.5
-RSpec + Capybara
+* PostgreSQL 9.3.4
+* Ruby 2.0.0.
+* Rails 4.1.5
+* RSpec + Capybara
 
 For the front end we are using PureCSS modules.
 
